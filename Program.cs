@@ -1,2 +1,44 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+System.Console.WriteLine("**********************************************");
+System.Console.WriteLine("Enter two numbers seperated by a `new line`: ");
+System.Console.WriteLine(
+@"For e.g.
+XX
+YY"
+);
+System.Console.WriteLine("**********************************************");
+float.TryParse(Console.ReadLine(), out var num1);
+float.TryParse(Console.ReadLine(), out var num2);
+System.Console.WriteLine();
+Console.WriteLine($"You entered: {num1} and {num2}");
+System.Console.WriteLine();
+System.Console.WriteLine(@"Enter the option number for the desired operation:
+1. For adding both the numbers
+2. For subtracting `second` from `first`
+3. For multiplying both the numbers
+4. For dividing `first` by `second`");
+int.TryParse(Console.ReadLine(), out var op);
+System.Console.WriteLine();
+if (op == default)
+{
+    System.Console.WriteLine("You choose the wrong option");
+}
+else
+{
+    switch (op)
+    {
+        case 1:
+            System.Console.WriteLine($"Selected operation is {num1} + {num2}");
+            break;
+        case 2:
+            System.Console.WriteLine($"Selected operation is {num1} - {num2}");
+            break;
+        case 3:
+            System.Console.WriteLine($"Selected operation is {num1} X {num2}");
+            break;
+        case 4:
+            System.Console.WriteLine($"Selected operation is {num1} / {num2}");
+            break;
+    }
+    System.Console.WriteLine();
+}
