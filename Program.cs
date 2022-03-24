@@ -21,45 +21,24 @@ int.TryParse(Console.ReadLine(), out var op);
 System.Console.WriteLine();
 if (op == default)
 {
-    System.Console.WriteLine("You have chosen the wrong option");
+    System.Console.WriteLine("You choose the wrong option");
 }
 else
 {
-    string expression;
-    float result;
     switch (op)
     {
         case 1:
-            expression = $"{num1} + {num2}";
-            result = num1 + num2;
+            System.Console.WriteLine($"Selected operation is {num1} + {num2}");
             break;
         case 2:
-            expression = $"{num1} - {num2}";
-            result = num1 + num2;
+            System.Console.WriteLine($"Selected operation is {num1} - {num2}");
             break;
         case 3:
-            expression = $"{num1} X {num2}";
-            result = num1 * num2;
+            System.Console.WriteLine($"Selected operation is {num1} X {num2}");
             break;
         case 4:
-            expression = $"{num1} / {num2}";
-            result = num1 / num2;
-            break;
-        default:
-            expression = string.Empty;
-            result = default;
+            System.Console.WriteLine($"Selected operation is {num1} / {num2}");
             break;
     }
-    if (expression == string.Empty)
-    {
-        System.Console.WriteLine("You have chosen the wrong option");
-    }
-    else
-    {
-        System.Console.WriteLine();
-
-        System.Console.WriteLine($"Result: {expression} = {result}");
-        System.Console.WriteLine();
-
-    }
+    System.Console.WriteLine();
 }
